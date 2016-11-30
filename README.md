@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <div align="center">
   <img src="https://www.tensorflow.org/images/tf_logo_transp.png"><br><br>
 </div>
@@ -66,4 +65,3 @@ Hello, TensorFlow!
 
 The TensorFlow community has created amazing things with TensorFlow, please see the [resources section of tensorflow.org](https://www.tensorflow.org/versions/master/resources#community) for an incomplete list.
 =======
->>>>>>> d60e829ca1f95b4cff3e3d933481a4de01585e87
