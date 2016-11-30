@@ -1,3 +1,4 @@
+#!/project/fchen14/anaconda3/bin/python
 #!/usr/bin/env python
 # Copyright 2015 The TensorFlow Authors. All Rights Reserved.
 #
@@ -52,7 +53,8 @@ GCC_HOST_COMPILER_PATH = ('%{gcc_host_compiler_path}')
 CURRENT_DIR = os.path.dirname(sys.argv[0])
 NVCC_PATH = CURRENT_DIR + '/../../../cuda/bin/nvcc'
 LLVM_HOST_COMPILER_PATH = ('/usr/bin/gcc')
-PREFIX_DIR = os.path.dirname(GCC_HOST_COMPILER_PATH)
+#PREFIX_DIR = os.path.dirname(GCC_HOST_COMPILER_PATH)
+PREFIX_DIR = os.path.dirname('/usr/bin/as')
 
 def Log(s):
   print('gpus/crosstool: {0}'.format(s))

@@ -54,6 +54,12 @@ toolchain {
   # Use "-std=c++11" for nvcc. For consistency, force both the host compiler
   # and the device compiler to use "-std=c++11".
   cxx_flag: "-std=c++11"
+  #linker_flag: "-Wl,-rpath,/usr/local/packages/compilers/gcc/4.8.2/lib64"
+  #linker_flag: "-Wl,-rpath,/usr/local/packages/compilers/gcc/4.8.2/lib/gcc/x86_64-unknown-linux-gnu/4.8.2/include"
+  #linker_flag: "-Wl,-rpath,/usr/local/packages/compilers/gcc/4.8.2/lib/gcc/x86_64-unknown-linux-gnu/4.8.2/include-fixed"
+  linker_flag: "-Wl,-rpath,/usr/local/packages/compilers/gcc/4.9.0/lib64"
+  linker_flag: "-Wl,-rpath,/usr/local/packages/compilers/gcc/4.9.0/lib/gcc/x86_64-unknown-linux-gnu/4.8.2/include"
+  linker_flag: "-Wl,-rpath,/usr/local/packages/compilers/gcc/4.9.0/lib/gcc/x86_64-unknown-linux-gnu/4.8.2/include-fixed"
   linker_flag: "-lstdc++"
   linker_flag: "-B/usr/bin/"
 
@@ -178,6 +184,13 @@ toolchain {
   linker_flag: "dynamic_lookup"
   # TODO(ulfjack): This is wrong on so many levels. Figure out a way to auto-detect the proper
   # setting from the local compiler, and also how to make incremental builds correct.
+  #cxx_builtin_include_directory: "/usr/local/packages/cuda/7.5"
+  #cxx_builtin_include_directory: "/usr/local/packages/compilers/gcc/4.8.2/include"
+  #cxx_builtin_include_directory: "/usr/local/packages/compilers/gcc/4.8.2/include/lib/gcc/x86_64-unknown-linux-gnu/4.8.2/include"
+  #cxx_builtin_include_directory: "/usr/local/packages/compilers/gcc/4.8.2/include/lib/gcc/x86_64-unknown-linux-gnu/4.8.2/include-fixed"
+  cxx_builtin_include_directory: "/usr/local/packages/compilers/gcc/4.9.0/include"
+  cxx_builtin_include_directory: "/usr/local/packages/compilers/gcc/4.9.0/include/lib/gcc/x86_64-unknown-linux-gnu/4.8.2/include"
+  cxx_builtin_include_directory: "/usr/local/packages/compilers/gcc/4.9.0/include/lib/gcc/x86_64-unknown-linux-gnu/4.8.2/include-fixed"
   cxx_builtin_include_directory: "/"
   tool_path { name: "gcov" path: "/usr/bin/gcov" }
   tool_path { name: "ld" path: "/usr/bin/ld" }
